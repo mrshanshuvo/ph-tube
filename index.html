@@ -12,10 +12,18 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .active {
+        background-color: red;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav class="w-11/12 mx-auto flex justify-between border-b-2 py-3">
+      <nav
+        class="w-11/12 mx-auto flex justify-between border-b-2 py-5 border-[#17171720]"
+      >
         <div class="logo">
           <img class="w-[120px]" src="./assets/Logo.png" alt="" />
         </div>
@@ -27,5 +35,28 @@
         </div>
       </nav>
     </header>
+    <main>
+      <nav id="category-container" class="flex py-5 justify-center gap-5">
+        <div>
+          <button id="btn-all" onclick="loadVideos()" class="btn btn-sm">
+            All
+          </button>
+        </div>
+      </nav>
+      <section
+        id="video-container"
+        class="w-11/12 mx-auto grid grid-cols-4 gap-5"
+      >
+        <div
+          class="col-span-full text-center flex flex-col justify-center items-center py-20"
+        >
+          <img class="w-[120px]" src="./assets/Icon.png" alt="" />
+          <h2 class="text-xl font-bold">
+            Oops!! Sorry, There is no content here
+          </h2>
+        </div>
+      </section>
+    </main>
+    <script src="./script/index.js"></script>
   </body>
 </html>
